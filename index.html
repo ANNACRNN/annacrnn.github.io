@@ -7,29 +7,32 @@
   <link rel="stylesheet" href="home_style.css">
 </head>
 
-<div id="rotating-banner">
-  <a id="banner-link" href="planet_formation.html">
-    <img id="banner-image" src="images/planet_formation.jpg" alt="Rotating banner">
+<div id="background-link">
+  <a id="bg-anchor" href="planet_formation.html">
+    <div id="background-rotator"></div>
   </a>
 </div>
 
 <script>
   const images = [
     { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
-    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
     { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
+    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
     { src: 'images/ai.jpg', link: 'ai.html' }
   ];
 
   let index = 0;
-  const imgEl = document.getElementById('banner-image');
-  const linkEl = document.getElementById('banner-link');
+  const rotator = document.getElementById('background-rotator');
+  const anchor = document.getElementById('bg-anchor');
 
-  setInterval(() => {
+  function rotateBackground() {
+    rotator.style.backgroundImage = `url('${images[index].src}')`;
+    anchor.href = images[index].link;
     index = (index + 1) % images.length;
-    imgEl.src = images[index].src;
-    linkEl.href = images[index].link;
-  }, 5000); // 5 seconds per image
+  }
+
+  rotateBackground(); // initial
+  setInterval(rotateBackground, 6000); // every 6 seconds
 </script>
 <body>
   <nav>
