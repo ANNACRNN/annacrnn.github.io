@@ -8,7 +8,7 @@ html, body {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-30%);  /* Adjust this value to shift it slightly left */
+  transform: translateX(-20%);  /* Adjust this value to shift it slightly left */
   color: white;
   font-size: 2em;
   font-family: Arial, sans-serif;
