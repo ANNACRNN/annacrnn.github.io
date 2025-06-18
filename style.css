@@ -19,3 +19,16 @@ nav a {
 nav a.active {
   font-weight: bold;
 }
+@keyframes backgroundRotate {
+  0%   { background-image: url('images/planet_formation.jpg'); }
+  33%  { background-image: url('images/exoplanet_research.jpg'); }
+  66%  { background-image: url('images/binary_stars.jpg'); }
+  100% { background-image: url('images/ai.jpg'); }
+}
+
+body {
+  animation: backgroundRotate 10s infinite;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
