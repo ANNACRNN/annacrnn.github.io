@@ -14,26 +14,30 @@
 </div>
 
 <script>
-  const images = [
-    { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
-    { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
-    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
-    { src: 'images/ai.jpg', link: 'ai.html' }
-  ];
+  window.onload = function () {
+    const images = [
+      { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
+      { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
+      { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
+      { src: 'images/ai.jpg', link: 'ai.html' }
+    ];
 
-  let index = 0;
-  const rotator = document.getElementById('background-rotator');
-  const anchor = document.getElementById('bg-anchor');
+    let index = 0;
+    const rotator = document.getElementById('background-rotator');
+    const anchor = document.getElementById('bg-anchor');
 
-  function rotateBackground() {
-    rotator.style.backgroundImage = `url('${images[index].src}')`;
-    anchor.href = images[index].link;
-    index = (index + 1) % images.length;
+    function rotateBackground() {
+      rotator.style.backgroundImage = `url('${images[index].src}')`;
+      anchor.href = images[index].link;
+      index = (index + 1) % images.length;
+    }
+
+    rotateBackground();
+    setInterval(rotateBackground, 6000);
   }
-
-  rotateBackground(); // initial
-  setInterval(rotateBackground, 6000); // every 6 seconds
 </script>
+
+
 <body>
   <nav>
     <a href="index.html" class="active">Science and AI</a>
