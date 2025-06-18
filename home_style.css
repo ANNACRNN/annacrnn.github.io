@@ -34,21 +34,22 @@ html, body {
 #background-wrapper {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  width: 800px;
   height: 100vh;
+  transform: translateX(-50%);
   overflow: hidden;
   z-index: 0;
 }
 
 .bg-layer {
   position: absolute;
-  width: 100%;
+  width: 800px;
   height: 100%;
   background-size: cover;
   background-position: center;
   transition: opacity 1.5s ease-in-out;
-  pointer-events: none; /* Allow clicks to pass through */
+  pointer-events: none;
 }
 
 #bg1.active, #bg2.active {
