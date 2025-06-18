@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<div id="rotating-banner">
-  <a id="banner-link" href="research.html">
-    <img id="banner-image" src="images/img1.jpg" alt="Rotating banner">
-  </a>
-</div>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr. Anna Childs</title>
   <link rel="stylesheet" href="home_style.css">
 </head>
+
+<div id="rotating-banner">
+  <a id="banner-link" href="planet_formation.html">
+    <img id="banner-image" src="images/planet_formation.jpg" alt="Rotating banner">
+  </a>
+</div>
+
+<script>
+  const images = [
+    { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
+    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
+    { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
+    { src: 'images/ai.jpg', link: 'ai.html' }
+  ];
+
+  let index = 0;
+  const imgEl = document.getElementById('banner-image');
+  const linkEl = document.getElementById('banner-link');
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    imgEl.src = images[index].src;
+    linkEl.href = images[index].link;
+  }, 5000); // 5 seconds per image
+</script>
 <body>
   <nav>
     <a href="index.html" class="active">Science and AI</a>
@@ -19,6 +39,8 @@
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+
 
   <section class="section">
     <h1>Research Interests</h1>
@@ -45,21 +67,3 @@
   </footer>
 </body>
 </html>
-<script>
-  const images = [
-    { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
-    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
-    { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
-    { src: 'images/ai.jpg', link: 'ai.html' }
-  ];
-
-  let index = 0;
-  const imgEl = document.getElementById('banner-image');
-  const linkEl = document.getElementById('banner-link');
-
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    imgEl.src = images[index].src;
-    linkEl.href = images[index].link;
-  }, 5000); // 5 seconds per image
-</script>
