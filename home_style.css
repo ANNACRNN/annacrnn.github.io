@@ -27,7 +27,7 @@ html, body {
   left: 0;
   width: 800px;
   height: 100%;
-  z-index: 5; /* Make sure it’s above bg layers but below nav/text if needed */
+  z-index: -1; /* Make sure it’s above bg layers but below nav/text if needed */
   display: block;
 }
 
@@ -39,7 +39,7 @@ html, body {
   height: 100vh;
   transform: translateX(-50%);
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 
 .bg-layer {
