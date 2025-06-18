@@ -7,8 +7,8 @@ html, body {
 #bg-text {
   position: absolute;
   bottom: 40px;
-  left: 0%;
-  transform: translateX(0%);  /* Adjust this value to shift it slightly left */
+  left: 50%;
+  transform: translateX(-50%);  /* Adjust this value to shift it slightly left */
   color: white;
   font-size: 2em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
