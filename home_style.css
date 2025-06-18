@@ -43,6 +43,8 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
   background-color: black; /* fallback background */
+  pointer-events: none; /* Allow clicks to pass through */
+
 }
 
 #bg1.active, #bg2.active {
