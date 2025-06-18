@@ -8,7 +8,7 @@ html, body {
   position: absolute;
   bottom: 40px;
   left: 0%;
-  transform: translateX(-5%);  /* Adjust this value to shift it slightly left */
+  transform: translateX(0%);  /* Adjust this value to shift it slightly left */
   color: white;
   font-size: 2em;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
