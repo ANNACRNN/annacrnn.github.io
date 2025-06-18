@@ -14,27 +14,41 @@
 </div>
 
 <script>
-  window.onload = function () {
-    const images = [
-      { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
-      { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
-      { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
-      { src: 'images/ai.jpg', link: 'ai.html' }
-    ];
+  const images = [
+    { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
+    { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
+    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
+    { src: 'images/ai.jpg', link: 'ai.html' }
+  ];
 
-    let index = 0;
-    const rotator = document.getElementById('background-rotator');
-    const anchor = document.getElementById('bg-anchor');
+  let index = 0;
+  const bg1 = document.getElementById('bg1');
+  const bg2 = document.getElementById('bg2');
+  const anchor = document.getElementById('bg-anchor');
+  let toggle = true;
 
-    function rotateBackground() {
-      rotator.style.backgroundImage = `url('${images[index].src}')`;
-      anchor.href = images[index].link;
-      index = (index + 1) % images.length;
+  function rotateBackground() {
+    const current = images[index];
+    anchor.href = current.link;
+
+    if (toggle) {
+      bg1.style.backgroundImage = `url('${current.src}')`;
+      bg1.classList.add('active');
+      bg2.classList.remove('active');
+    } else {
+      bg2.style.backgroundImage = `url('${current.src}')`;
+      bg2.classList.add('active');
+      bg1.classList.remove('active');
     }
 
+    toggle = !toggle;
+    index = (index + 1) % images.length;
+  }
+
+  window.onload = () => {
     rotateBackground();
     setInterval(rotateBackground, 6000);
-  }
+  };
 </script>
 
 
