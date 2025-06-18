@@ -4,6 +4,44 @@ html, body {
   padding: 0;
 }
 
+#bg-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  color: white;
+  font-size: 2em;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 2px 2px 6px black;
+  z-index: 10;
+  max-width: 70%;
+}
+
+#background-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+#bg1.active, #bg2.active {
+  opacity: 1;
+}
+
 body {
   font-family: Arial, sans-serif;
   max-width: 800px;

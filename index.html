@@ -7,52 +7,15 @@
   <link rel="stylesheet" href="home_style.css">
 </head>
 
-<div id="background-link">
-  <a id="bg-anchor" href="planet_formation.html">
-    <div id="background-rotator"></div>
-  </a>
-</div>
-
-<script>
-  const images = [
-    { src: 'images/planet_formation.jpg', link: 'planet_formation.html' },
-    { src: 'images/exoplanets.jpg', link: 'exoplanets.html' },
-    { src: 'images/binary_stars.jpg', link: 'binary_stars.html' },
-    { src: 'images/ai.jpg', link: 'ai.html' }
-  ];
-
-  let index = 0;
-  const bg1 = document.getElementById('bg1');
-  const bg2 = document.getElementById('bg2');
-  const anchor = document.getElementById('bg-anchor');
-  let toggle = true;
-
-  function rotateBackground() {
-    const current = images[index];
-    anchor.href = current.link;
-
-    if (toggle) {
-      bg1.style.backgroundImage = `url('${current.src}')`;
-      bg1.classList.add('active');
-      bg2.classList.remove('active');
-    } else {
-      bg2.style.backgroundImage = `url('${current.src}')`;
-      bg2.classList.add('active');
-      bg1.classList.remove('active');
-    }
-
-    toggle = !toggle;
-    index = (index + 1) % images.length;
-  }
-
-  window.onload = () => {
-    rotateBackground();
-    setInterval(rotateBackground, 6000);
-  };
-</script>
-
-
 <body>
+  <div id="background-wrapper">
+    <a id="bg-anchor" href="#">
+      <div class="bg-layer" id="bg1"></div>
+      <div class="bg-layer" id="bg2"></div>
+      <div id="bg-text"></div>
+    </a>
+  </div>
+
   <nav>
     <a href="index.html" class="active">Science and AI</a>
     <a href="aboutme.html">About</a>
@@ -60,8 +23,6 @@
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
-
-
 
   <section class="section">
     <h1>Research Interests</h1>
@@ -72,7 +33,6 @@
       <li>AI and machine learning applications in astrophysics</li>
     </ul>
   </section>
-
 
   <section class="section">
     <h2>Publications</h2>
@@ -86,5 +46,61 @@
   <footer class="section">
     <p>Last updated: June 2025</p>
   </footer>
+
+  <script>
+    const images = [
+      {
+        src: 'images/planet_formation.jpg',
+        link: 'planet_formation.html',
+        text: 'Planet Formation: Where worlds begin'
+      },
+      {
+        src: 'images/exoplanets.jpg',
+        link: 'exoplanets.html',
+        text: 'Exploring Exoplanets Beyond Our Solar System'
+      },
+      {
+        src: 'images/binary_stars.jpg',
+        link: 'binary_stars.html',
+        text: 'Binary Stars and Stellar Companions'
+      },
+      {
+        src: 'images/ai.jpg',
+        link: 'ai.html',
+        text: 'Artificial Intelligence in Astronomy'
+      }
+    ];
+
+    let index = 0;
+    const bg1 = document.getElementById('bg1');
+    const bg2 = document.getElementById('bg2');
+    const anchor = document.getElementById('bg-anchor');
+    const bgText = document.getElementById('bg-text');
+    let toggle = true;
+
+    function rotateBackground() {
+      const current = images[index];
+      anchor.href = current.link;
+      bgText.textContent = current.text;
+
+      if (toggle) {
+        bg1.style.backgroundImage = `url('${current.src}')`;
+        bg1.classList.add('active');
+        bg2.classList.remove('active');
+      } else {
+        bg2.style.backgroundImage = `url('${current.src}')`;
+        bg2.classList.add('active');
+        bg1.classList.remove('active');
+      }
+
+      toggle = !toggle;
+      index = (index + 1) % images.length;
+    }
+
+    window.onload = () => {
+      rotateBackground(); // show first image
+      setInterval(rotateBackground, 6000); // change every 6 seconds
+    };
+  </script>
 </body>
 </html>
