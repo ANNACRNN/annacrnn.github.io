@@ -7,7 +7,7 @@ html, body {
 #bg-text {
   position: absolute;
   bottom: 40px;
-  left: 50%;
+  left: 30%;
   transform: translateX(-20%);  /* Adjust this value to shift it slightly left */
   color: white;
   font-size: 2em;
@@ -21,29 +21,34 @@ html, body {
 
 }
 
-#background-wrapper {
-  position: fixed;
+#bg-anchor {
+  position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  z-index: 5; /* Make sure it’s above bg layers but below nav/text if needed */
+  display: block;
+}
+
+#background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
+  z-index: 0;
 }
 
 .bg-layer {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 800px;  /* Or try a fixed px size like '800px auto' */
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  opacity: 0;
+  background-size: cover;
+  background-position: center;
   transition: opacity 1.5s ease-in-out;
-  background-color: black; /* fallback background */
+  pointer-events: none; /* Allow clicks to pass through */
 }
 
 #bg1.active, #bg2.active {
@@ -52,7 +57,7 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  font-weight: 300;  /* or 200 for even lighter */  text-transform: uppercase !important;
+  font-weight: 200;  /* or 200 for even lighter */  text-transform: uppercase !important;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
