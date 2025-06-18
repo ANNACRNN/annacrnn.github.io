@@ -11,7 +11,7 @@ html, body {
   color: white;
   font-size: 2em;
   font-family: Arial, sans-serif;
-  font-weight: 300;  /* or 200 for even lighter */
+  font-weight: 200;  /* or 200 for even lighter */
   text-transform: uppercase !important;
   text-shadow: 2px 2px 6px black;
   z-index: 10;
@@ -51,7 +51,7 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  font-weight: 300;  /* or 200 for even lighter */  text-transform: uppercase !important;
+  font-weight: 200;  /* or 200 for even lighter */  text-transform: uppercase !important;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
