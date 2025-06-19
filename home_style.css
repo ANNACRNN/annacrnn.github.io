@@ -30,6 +30,16 @@ html, body {
   overflow: hidden;
 }
 
+#bg-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Make sure it’s above bg layers but below nav/text if needed */
+  display: block;
+}
+
 .bg-layer {
   background-repeat: no-repeat;
   background-position: center center;
