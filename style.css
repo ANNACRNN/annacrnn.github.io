@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  font-weight: 200;  /* or 200 for even lighter */
+  font-weight: 100;  /* or 200 for even lighter */
   text-transform: uppercase !important;
   max-width: 800px;
   margin: auto;
@@ -20,6 +20,10 @@ nav a {
 }
 nav a.active {
   font-weight: bold;
+}
+
+h1 {
+  text-align: center;
 }
 
 .banner-container {
