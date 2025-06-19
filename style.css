@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   font-weight: 100;  /* or 200 for even lighter */
-  text-transform: uppercase !important;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
@@ -44,7 +43,7 @@ h1 {
 }
 
 .custom-image {
-  width: 500px;
+  width: 600px;
   height: auto;
   display: block; /* or inline-block depending on your layout */
   margin: 2rem auto; /* centers the image horizontally with space around it */
