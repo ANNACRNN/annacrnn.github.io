@@ -40,8 +40,8 @@ nav a.active {
 }
 
 .custom-image {
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width: 300px;
+  width: 500px;
+  height: auto;
+  display: block; /* or inline-block depending on your layout */
+  margin: 2rem auto; /* centers the image horizontally with space around it */
 }
