@@ -48,3 +48,14 @@ h1 {
   display: block; /* or inline-block depending on your layout */
   margin: 2rem auto; /* centers the image horizontally with space around it */
 }
+
+.pdf-container {
+  width: 100%;
+  height: 1000px;
+  margin-top: 2rem;
+  border: none;              /* Removes any border from the container */
+}
+
+.pdf-container embed {
+  border: 1px solid white;   /* Force a white border (or use 'none' to remove) */
+}
