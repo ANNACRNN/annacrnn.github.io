@@ -78,4 +78,36 @@ a {
 
 .pdf-container embed {
   border: 1px solid white;   /* Force a white border (or use 'none' to remove) */
+
+  /* Mobile styles */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .custom-image2 {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+  }
+}
 }
