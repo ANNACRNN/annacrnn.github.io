@@ -1,22 +1,25 @@
 body {
   font-family: Arial, sans-serif;
-  font-weight: 100;  /* or 200 for even lighter */
+  font-weight: 100;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
   background: black;
   color: white;
 }
+
 nav {
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
+
 nav a {
   margin-right: 1rem;
   text-decoration: none;
   color: white;
 }
+
 nav a.active {
   font-weight: bold;
 }
@@ -51,8 +54,8 @@ a {
 .custom-image {
   width: 600px;
   height: auto;
-  display: block; /* or inline-block depending on your layout */
-  margin: 2rem auto; /* centers the image horizontally with space around it */
+  display: block;
+  margin: 2rem auto;
 }
 
 .custom-image2 {
@@ -65,21 +68,21 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Puts it behind other content */
+  z-index: -1;
 }
-
 
 .pdf-container {
   width: 100%;
   height: 1000px;
   margin-top: 2rem;
-  border: none;              /* Removes any border from the container */
+  border: none;
 }
 
 .pdf-container embed {
-  border: 1px solid white;   /* Force a white border (or use 'none' to remove) */
+  border: 1px solid white;
+}
 
-  /* Mobile styles */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
@@ -93,6 +96,7 @@ a {
   }
 
   .custom-image2 {
+    position: static;
     width: 100%;
     max-width: 90vw;
     height: auto;
@@ -109,5 +113,4 @@ a {
     font-size: 0.9rem;
     padding: 1rem 0;
   }
-}
 }
