@@ -25,6 +25,12 @@ h1 {
   text-align: center;
 }
 
+a {
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+}
+
 .banner-container {
   width: 100%;
   overflow: hidden;
