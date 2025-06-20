@@ -4,35 +4,47 @@
   <meta charset="UTF-8">
   <title>CV | Dr. Anna Childs</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .pdf-container {
+      width: 100%;
+      height: 1000px;
+      margin-top: 2rem;
+    }
+
+    .cv-links {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .cv-links a {
+      margin-right: 1rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Science and AI</a>
-    <a href="aboutme.html">About</a>
+    <a href="index.html">SCIENCE AND AI</a>
+    <a href="aboutme.html">ABOUT</a>
     <a href="CV.html" class="active">CV</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
   </nav>
 
   <main>
-  <section class="section">
-    <h2>Software & Tools</h2>
-    <ul>
-      <li><strong>BASE9_utils:</strong> Pipeline for identifying photometric binaries using Gaia DR3 – <a href="https://github.com/ageller/BASE9_utils" target="_blank">GitHub</a></li>
-      <li><strong>REBOUND extensions:</strong> Developed tools for fragmentation, composition tracking, and migration – <a href="https://github.com/ANNACRNN" target="_blank">GitHub</a></li>
-      <li><strong>ZENITH:</strong> AI agent for X that summarizes and discusses new astronomy papers– <a href="https://x.com/AgentzenithAi" target="_blank">@AgentzenithAi</a></li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Curriculum Vitae</h2>
+      <div class="cv-links">
+        <a href="CV.pdf" target="_blank">📄 View CV as PDF</a>
+        <a href="https://scholar.google.com/citations?user=_0W1vrAAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%220%2FChilds%2C%20A%22&filter_database_fq_database=AND&filter_database_fq_database=database%3A%22astronomy%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_author=(author_facet_hier%3A%220%2FChilds%2C%20A%22)&fq_database=(database%3A%22astronomy%22)&q=%20%20first_author%3A%22Anna%20Childs%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"  target="_blank">NASA ADS</a>
+        <a href="https://orcid.org/0000-0002-9343-8612" target="_blank">ORCiD</a>
 
-  <section class="section">
-    <h2>Talks & Outreach</h2>
-    <ul>
-      <li>Prize Talk – North American PHANTOM Workshop (2024)</li>
-      <li>Invited – Shanghai Astronomical Observatory ET Seminar (2024)</li>
-      <li>Public Talk – Embry-Riddle Aeronautical University (2023)</li>
-      <li>Outreach – Las Vegas Astronomical Society, Astronomy on Tap, and volunteer violinist in local symphonies</li>
-    </ul>
-  </section>
+      </div>
+
+      <div class="pdf-container">
+        <embed src="CV.pdf" type="application/pdf" width="100%" height="100%">
+      </div>
+    </section>
   </main>
 </body>
 </html>
