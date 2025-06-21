@@ -89,11 +89,6 @@ a {
     font-size: 1rem;
   }
 
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-  }
 
   .custom-image2 {
     position: static;
