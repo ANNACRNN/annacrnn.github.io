@@ -90,8 +90,8 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     background-image: url('your-image.jpg'); /* Replace with your actual path */
     background-size: cover;
     background-position: center;
@@ -100,7 +100,7 @@ a {
   }
 
   .pdf-container {
-    width: 100%;
+    width: 80%;
     height: 100vh;
     margin-top: 2rem;
     border: none;
@@ -108,7 +108,7 @@ a {
 
   .pdf-container embed {
     border: 1px solid white;
-    width: 100%;
+    width: 80%;
     height: 100%;
   }
 
