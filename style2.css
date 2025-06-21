@@ -71,30 +71,29 @@ a {
   z-index: -1;
 }
 
-.pdf-container {
+.pdf-container embed {
+  background-color: white;
+  border: 1px solid white;
   width: 100%;
-  height: 1000px;
-  margin-top: 2rem;
-  border: none;
+  height: 100%;
 }
 
 .pdf-container embed {
   border: 1px solid white;
 }
 
-/* ✅ Responsive Design */
 @media (max-width: 768px) {
   body {
     padding: 1rem;
     font-size: 1rem;
   }
 
-
   .custom-image2 {
-    position: static;
-    width: 100%;
-    height: auto;
-    margin: 1rem auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-image: url('your-image.jpg'); /* Replace with your actual path */
     background-size: cover;
     background-position: center;
@@ -102,16 +101,18 @@ a {
     z-index: -1;
   }
 
-.pdf-container {
-  width: 100%;
-  height: 1000px;
-  margin-top: 2rem;
-  border: none;
-}
+  .pdf-container {
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+    border: none;
+  }
 
-.pdf-container embed {
-  border: 1px solid white;
-}
+  .pdf-container embed {
+    border: 1px solid white;
+    width: 100%;
+    height: 100%;
+  }
 
   h1, h2, h3 {
     text-align: center;
