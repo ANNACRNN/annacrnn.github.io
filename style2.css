@@ -98,9 +98,13 @@ a {
   .custom-image2 {
     position: static;
     width: 100%;
-    max-width: 90vw;
     height: auto;
     margin: 1rem auto;
+    background-image: url('your-image.jpg'); /* Replace with your actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
 
   h1, h2, h3 {
