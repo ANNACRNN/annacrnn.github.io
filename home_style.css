@@ -14,7 +14,8 @@ html, body {
   font-weight: 200;  /* or 200 for even lighter */
   text-transform: uppercase !important;
   text-shadow: 2px 2px 6px black;
-  z-index: 10;
+  z-index: 12;
+  pointer-events: none; /* This makes text not block clicks */
   max-width: 70%;
   transition: opacity 1.5s ease-in-out;
 
@@ -53,7 +54,7 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
   background-color: black; /* fallback background */
-  pointer-events: none; /* Allow clicks to pass through */
+  pointer-events: auto; /* Allow clicks to pass through */
 
 }
 
@@ -63,7 +64,8 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  font-weight: 200;  /* or 200 for even lighter */  text-transform: uppercase !important;
+  font-weight: 200;  /* or 200 for even lighter */  
+  text-transform: uppercase !important;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
@@ -119,4 +121,5 @@ nav a.active {
 }
 #bg-anchor:hover #bg-text {
   text-decoration: underline;
+  font-weight: bold;
 }
