@@ -8,12 +8,12 @@
 </head>
 
 <body>
-<div id="background-wrapper">
-  <a id="bg-anchor" href="#">
-    <div id="bg-image"></div>
-    <div id="bg-text"></div>
-  </a>
-</div>
+  <div id="background-wrapper">
+    <a id="bg-anchor" href="#">
+      <div id="bg-image"></div>
+      <div id="bg-text"></div>
+    </a>
+  </div>
 
   <nav>
     <a href="index.html" class="active">+ Science and AI</a>
@@ -28,47 +28,47 @@
     <p>Astrophysicist & Writer</p>
   </section>
 
+  <script>
+    const images = [
+      {
+        src: 'images/planet_formation.jpg',
+        link: 'planet_formation.html',
+        text: '+ Planet Formation: Where worlds begin'
+      },
+      {
+        src: 'images/exoplanets.jpg',
+        link: 'exoplanets.html',
+        text: '+ Exploring Exoplanets and Habitability'
+      },
+      {
+        src: 'images/binary_stars.jpg',
+        link: 'binary_stars.html',
+        text: '+ Binary Stars and Tatooines'
+      },
+      {
+        src: 'images/ai.jpg',
+        link: 'ai.html',
+        text: '+ Artificial Intelligence in Astronomy'
+      }
+    ];
 
-<script>
-  const images = [
-    {
-      src: 'images/planet_formation.jpg',
-      link: 'planet_formation.html',
-      text: '+ Planet Formation: Where worlds begin'
-    },
-    {
-      src: 'images/exoplanets.jpg',
-      link: 'exoplanets.html',
-      text: '+ Exploring Exoplanets and Habitability'
-    },
-    {
-      src: 'images/binary_stars.jpg',
-      link: 'binary_stars.html',
-      text: '+ Binary Stars and Tatooines'
-    },
-    {
-      src: 'images/ai.jpg',
-      link: 'ai.html',
-      text: '+ Artificial Intelligence in Astronomy'
+    let index = 0;
+    const anchor = document.getElementById('bg-anchor');
+    const bgText = document.getElementById('bg-text');
+    const bgImage = document.getElementById('bg-image');
+
+    function rotateBackground() {
+      const current = images[index];
+      bgImage.style.backgroundImage = `url('${current.src}')`;
+      anchor.href = current.link;
+      bgText.textContent = current.text;
+      index = (index + 1) % images.length;
     }
-  ];
 
-  let index = 0;
-  const anchor = document.getElementById('bg-anchor');
-  const bgText = document.getElementById('bg-text');
-
-  function rotateBackground() {
-    const current = images[index];
-    anchor.style.backgroundImage = `url('${current.src}')`;
-    anchor.href = current.link;
-    bgText.textContent = current.text;
-    index = (index + 1) % images.length;
-  }
-
-  window.onload = () => {
-    rotateBackground();
-    setInterval(rotateBackground, 6000);
-  };
-</script>
+    window.onload = () => {
+      rotateBackground();
+      setInterval(rotateBackground, 6000);
+    };
+  </script>
 </body>
 </html>

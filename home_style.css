@@ -2,8 +2,15 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 200;
+  text-transform: uppercase !important;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
 }
-
 
 #background-wrapper {
   position: relative;
@@ -18,16 +25,13 @@ html, body {
 
 #bg-anchor {
   display: block;
-  width: 800px;
-  height: auto;
   text-decoration: none;
   position: relative;
 }
 
 #bg-image {
   width: 800px;
-  height: auto;
-  aspect-ratio: 16 / 10; /* or manually set height if you prefer */
+  aspect-ratio: 16 / 10;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,44 +55,18 @@ html, body {
   font-weight: bold;
 }
 
-#background-link {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11; /* Stay behind all content */
-}
-
-#background-rotator {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  font-weight: 200;  /* or 200 for even lighter */  
-  text-transform: uppercase !important;
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  background: #000000;
-  color: white;
-}
 nav {
   border-bottom: 2px solid #ddd;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
 }
+
 nav a {
   margin-right: 1rem;
   text-decoration: none;
   color: white;
 }
+
 nav a.active {
   font-weight: bold;
 }
-
