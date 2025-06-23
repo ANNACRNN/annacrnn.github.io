@@ -113,10 +113,7 @@ nav a.active {
   transition: background-image 1s ease-in-out;
 }
 
-#bg-anchor {
-  text-decoration: none;
-  color: inherit;
-}
+
 #bg-anchor:hover #bg-text {
   text-decoration: underline;
 }
