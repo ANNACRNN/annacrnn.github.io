@@ -2,69 +2,121 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #000;
+}
+
+#bg-text {
+  position: absolute;
+  bottom: 40px;
+  right: 25%;
   color: white;
+  font-size: 2em;
   font-family: Arial, sans-serif;
-  font-weight: 200;
+  font-weight: 200;  /* or 200 for even lighter */
   text-transform: uppercase !important;
-}
+  text-shadow: 2px 2px 6px black;
+  z-index: 10;
+  max-width: 70%;
+  transition: opacity 1.5s ease-in-out;
 
-nav {
-  border-bottom: 2px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: white;
-}
-
-nav a.active {
-  font-weight: bold;
 }
 
 #background-wrapper {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  height: auto;
+  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 #bg-anchor {
-  display: block;
-  width: 800px;
-  aspect-ratio: 16 / 10;
-  text-decoration: none;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-}
-
-#bg-text {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 1.5em;
-  text-shadow: 2px 2px 6px black;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11; /* Make sure it’s above bg layers but below nav/text if needed */
+  display: block;
 }
 
-#bg-anchor:hover #bg-text {
-  text-decoration: underline;
+.bg-layer {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 800px;  /* Or try a fixed px size like '800px auto' */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  background-color: black; /* fallback background */
+  pointer-events: none; /* Allow clicks to pass through */
+
+}
+
+#bg1.active, #bg2.active {
+  opacity: 1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 200;  /* or 200 for even lighter */  text-transform: uppercase !important;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: #000000;
+  color: white;
+}
+nav {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: white;
+}
+nav a.active {
   font-weight: bold;
 }
+#rotating-banner {
+  width: 100%;
+  height: 400px; /* adjust as needed */
+  overflow: hidden;
+  text-align: center;
+}
 
-section.section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+#rotating-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+#background-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Stay behind all content */
+}
+
+#background-rotator {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+#bg-anchor {
+  text-decoration: none;
+  color: inherit;
+}
+#bg-anchor:hover #bg-text {
+  text-decoration: underline;
 }
