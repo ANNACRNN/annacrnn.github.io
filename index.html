@@ -8,11 +8,12 @@
 </head>
 
 <body>
-<div id="background-wrapper">
-  <a id="bg-anchor" href="#">
-    <div id="bg-text"></div>
-  </a>
-</div>
+
+  <div id="background-wrapper">
+    <a id="bg-anchor" href="#">
+      <div id="bg-text"></div>
+    </a>
+  </div>
 
   <nav>
     <a href="index.html" class="active">+ Science and AI</a>
@@ -54,7 +55,6 @@
     let index = 0;
     const anchor = document.getElementById('bg-anchor');
     const bgText = document.getElementById('bg-text');
-    const bgImage = document.getElementById('bg-image');
 
     function rotateBackground() {
       const current = images[index];
@@ -69,5 +69,6 @@
       setInterval(rotateBackground, 6000);
     };
   </script>
+
 </body>
 </html>
