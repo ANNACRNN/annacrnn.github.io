@@ -9,11 +9,9 @@
 
 <body>
   <div id="background-wrapper">
-    <a id="bg-anchor" href="#">
-      <div class="bg-layer" id="bg1"></div>
-      <div class="bg-layer" id="bg2"></div>
-      <div id="bg-text"></div>
-    </a>
+<a id="bg-anchor" href="#">
+  <div id="bg-text"></div>
+</a>
   </div>
 
   <nav>
@@ -55,34 +53,20 @@
   ];
 
   let index = 0;
-  const bg1 = document.getElementById('bg1');
-  const bg2 = document.getElementById('bg2');
   const anchor = document.getElementById('bg-anchor');
   const bgText = document.getElementById('bg-text');
-  let toggle = true;
 
   function rotateBackground() {
     const current = images[index];
+    anchor.style.backgroundImage = `url('${current.src}')`;
     anchor.href = current.link;
     bgText.textContent = current.text;
-
-    if (toggle) {
-      bg1.style.backgroundImage = `url('${current.src}')`;
-      bg1.classList.add('active');
-      bg2.classList.remove('active');
-    } else {
-      bg2.style.backgroundImage = `url('${current.src}')`;
-      bg2.classList.add('active');
-      bg1.classList.remove('active');
-    }
-
-    toggle = !toggle;
     index = (index + 1) % images.length;
   }
 
   window.onload = () => {
-    rotateBackground(); // Show first image
-    setInterval(rotateBackground, 6000); // Rotate every 6s
+    rotateBackground();
+    setInterval(rotateBackground, 6000);
   };
 </script>
 </body>
