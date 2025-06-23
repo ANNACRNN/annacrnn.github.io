@@ -8,12 +8,11 @@
 </head>
 
 <body>
-  <div id="background-wrapper">
-    <a id="bg-anchor" href="#">
-      <div id="bg-image"></div>
-      <div id="bg-text"></div>
-    </a>
-  </div>
+<div id="background-wrapper">
+  <a id="bg-anchor" href="#">
+    <div id="bg-text"></div>
+  </a>
+</div>
 
   <nav>
     <a href="index.html" class="active">+ Science and AI</a>
@@ -59,7 +58,7 @@
 
     function rotateBackground() {
       const current = images[index];
-      bgImage.style.backgroundImage = `url('${current.src}')`;
+      anchor.style.backgroundImage = `url('${current.src}')`;
       anchor.href = current.link;
       bgText.textContent = current.text;
       index = (index + 1) % images.length;

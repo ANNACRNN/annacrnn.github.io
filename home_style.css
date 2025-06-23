@@ -13,28 +13,25 @@ html, body {
 }
 
 #background-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: auto;
   z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  pointer-events: auto;
 }
 
 #bg-anchor {
   display: block;
-  text-decoration: none;
-  position: relative;
-}
-
-#bg-image {
   width: 800px;
   aspect-ratio: 16 / 10;
+  text-decoration: none;
+  position: relative;
   background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-color: black;
 }
 
