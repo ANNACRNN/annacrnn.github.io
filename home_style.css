@@ -3,44 +3,21 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#background-link {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10; /* Stay behind all content */
-}
 
-#bg-anchor:hover #bg-text {
-  text-decoration: underline;
-}
 #bg-text {
   position: absolute;
   bottom: 40px;
-  left: 25%;
+  right: 25%;
   color: white;
   font-size: 2em;
   font-family: Arial, sans-serif;
   font-weight: 200;  /* or 200 for even lighter */
   text-transform: uppercase !important;
   text-shadow: 2px 2px 6px black;
-  z-index: 1;
+  z-index: 10;
   max-width: 70%;
   transition: opacity 1.5s ease-in-out;
 
-}
-
-
-#bg-anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2; /* Make sure it’s above bg layers but below nav/text if needed */
-  display: block;
-  pointer-events: auto; /* Allow clicks to pass through */
 }
 
 #background-wrapper {
@@ -51,7 +28,16 @@ html, body {
   width: 100%;
   z-index: -1;
   overflow: hidden;
-  pointer-events: auto; /* Allow clicks to pass through */
+}
+
+#bg-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11; /* Make sure it’s above bg layers but below nav/text if needed */
+  display: block;
 }
 
 .bg-layer {
@@ -67,7 +53,7 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
   background-color: black; /* fallback background */
-  pointer-events: auto; /* Allow clicks to pass through */
+  pointer-events: none; /* Allow clicks to pass through */
 
 }
 
@@ -97,7 +83,27 @@ nav a {
 nav a.active {
   font-weight: bold;
 }
+#rotating-banner {
+  width: 100%;
+  height: 400px; /* adjust as needed */
+  overflow: hidden;
+  text-align: center;
+}
 
+#rotating-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+#background-link {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Stay behind all content */
+}
 
 #background-rotator {
   width: 100%;
@@ -107,4 +113,10 @@ nav a.active {
   transition: background-image 1s ease-in-out;
 }
 
-
+#bg-anchor {
+  text-decoration: none;
+  color: inherit;
+}
+#bg-anchor:hover #bg-text {
+  text-decoration: underline;
+}
