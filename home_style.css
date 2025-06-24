@@ -7,7 +7,7 @@ html, body {
 #bg-text {
   position: absolute;
   bottom: 40px;
-  right: 25%;
+  left: 25%;
   color: white;
   font-size: 2em;
   font-family: Arial, sans-serif;
@@ -38,6 +38,7 @@ html, body {
   height: 100%;
   z-index: 11; /* Make sure it’s above bg layers but below nav/text if needed */
   display: block;
+  pointer-events: auto; /* Allow clicks to pass through */
 }
 
 .bg-layer {
@@ -53,7 +54,7 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
   background-color: black; /* fallback background */
-  pointer-events: none; /* Allow clicks to pass through */
+
 
 }
 
