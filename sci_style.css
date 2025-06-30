@@ -1,9 +1,10 @@
 body {
-  font-family: 'Georgia', serif;
-  color: #222;
-  background: #fafafa;
+  font-family: Arial, sans-serif;
+  font-weight: 100;
   margin: 0;
-  padding: 0;
+  padding: 2rem;
+  background: white;
+  color: black;
 }
 
 nav {
