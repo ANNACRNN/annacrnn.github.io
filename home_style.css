@@ -62,8 +62,8 @@ html, body {
 }
 
 body {
-  font-family: Arial, sans-serif;
-  font-weight: 200;  /* or 200 for even lighter */  text-transform: uppercase !important;
+font-family: 'Georgia', serif;
+  text-transform: uppercase !important;
   max-width: 800px;
   margin: 0;
   padding: 2rem;
