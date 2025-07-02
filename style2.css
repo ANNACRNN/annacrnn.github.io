@@ -7,11 +7,6 @@ body {
   color: white;
 }
 
-nav {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-}
 nav a {
   margin-right: 1rem;
   text-decoration: none;
@@ -19,8 +14,20 @@ nav a {
 }
 nav a.active {
   font-weight: bold;
-  text-decoration: underline;
 }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
 
 h1 {
   text-align: center;
