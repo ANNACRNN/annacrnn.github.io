@@ -106,12 +106,13 @@ h1 {
 
 .cv-links a {
   color: white;
-  text-decoration: none; /* Optional: remove underline */
-  font-weight: bold;
+  text-decoration: underline; /* Optional: remove underline */
+  display: inline-block; /* Ensures margin works properly on links */
+  margin: 0.5rem 1rem;   /* Adds vertical and horizontal spacing */
 }
 
 .cv-links a:hover {
-  text-decoration: underline; /* Optional: show underline on hover */
+  font-weight: bold; /* Optional: show underline on hover */
 }
 
 @media (max-width: 768px) {
