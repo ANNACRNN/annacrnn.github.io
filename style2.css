@@ -104,6 +104,15 @@ h1 {
   display: block;
 }
 
+.cv-links a {
+  color: white;
+  text-decoration: none; /* Optional: remove underline */
+}
+
+.cv-links a:hover {
+  text-decoration: underline; /* Optional: show underline on hover */
+}
+
 @media (max-width: 768px) {
   .pdf-container {
     display: none;
