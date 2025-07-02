@@ -124,45 +124,18 @@ a {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 1rem;
-    font-size: 1rem;
-  }
-
-  .custom-image2 {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .pdf-container {
     width: 100%;
     height: auto;
-    background-image: url('your-image.jpg'); /* Replace with your actual path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-
-  .pdf-container {
-    width: 80%;
-    height: 100vh;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border: none;
   }
 
   .pdf-container embed {
-    border: 1px solid white;
-    width: 80%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 60vh;  /* Ensures it's visible but not constrained weirdly */
+    border: none;
   }
-
-  h1, h2, h3 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    padding: 1rem 0;
-  }
+}
 }
