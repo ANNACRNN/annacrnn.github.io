@@ -108,5 +108,16 @@ h1 {
   .pdf-container {
     display: none;
   }
+
+    .custom-image2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh; /* Ensure it still covers full height */
+    background-size: cover;
+    background-position: center;
+  }
 }
 }
