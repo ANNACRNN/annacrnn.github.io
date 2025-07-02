@@ -107,6 +107,7 @@ h1 {
 .cv-links a {
   color: white;
   text-decoration: none; /* Optional: remove underline */
+  font-weight: bold;
 }
 
 .cv-links a:hover {
