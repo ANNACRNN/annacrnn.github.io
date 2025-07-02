@@ -116,3 +116,27 @@ h1 {
 .pdf-container embed {
   border: 1px solid white;   /* Force a white border (or use 'none' to remove) */
 }
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
