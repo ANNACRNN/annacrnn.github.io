@@ -1,6 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
-  font-weight: 100;
+  font-family: 'Georgia', serif;
   max-width: 800px;
   margin: auto;
   padding: 2rem;
@@ -79,6 +78,42 @@ a {
 
 .pdf-container embed {
   border: 1px solid white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  text-decoration: none;
+  color: black !important;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* position below the dropbtn */
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #eee;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media (max-width: 768px) {
