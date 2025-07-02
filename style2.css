@@ -125,17 +125,7 @@ a {
 
 @media (max-width: 768px) {
   .pdf-container {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border: none;
-  }
-
-  .pdf-container embed {
-    width: 100%;
-    height: auto;
-    min-height: 60vh;  /* Ensures it's visible but not constrained weirdly */
-    border: none;
+    display: none;
   }
 }
 }
