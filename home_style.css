@@ -163,3 +163,16 @@ nav {
 #bg-anchor:hover #bg-text {
   text-decoration: underline;
 }
+
+.custom-image-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.custom-image {
+  width: 600px;
+  height: auto;
+  display: block; /* or inline-block depending on your layout */
+  margin: 2rem auto; /* centers the image horizontally with space around it */
+}
