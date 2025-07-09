@@ -95,6 +95,16 @@ h1 {
   margin: 2rem auto; /* centers the image horizontally with space around it */
 }
 
+@media (max-width: 600px) {
+  .custom-image-wrapper {
+    padding: 0 1rem;
+  }
+
+  .custom-image {
+    width: 90%;
+    height: auto;
+  }
+
 .custom-image2 {
   position: fixed;
   top: 0;
